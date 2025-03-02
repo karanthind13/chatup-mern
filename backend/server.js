@@ -7,8 +7,9 @@ import userRoutes from "./routes/user.routes.js";
 
 import cookieParser from "cookie-parser";
 import connectToMongoDB from "./db/connectToMongoDB.js";
+import {app, server} from './socket/socket.js'
 
-const app = express();
+
 const PORT = process.env.PORT || 8000;
 
 dotenv.config(); // Load environment variables
@@ -26,7 +27,7 @@ app.use("/api/users", userRoutes);
 // });
 
 // Start Server & Connect to DB
-app.listen(PORT, async () => {
+server.listen(PORT, async () => {
     await connectToMongoDB(); // Ensure DB connection before serving requests
     console.log(`App is listening on port ${PORT}`);
 
