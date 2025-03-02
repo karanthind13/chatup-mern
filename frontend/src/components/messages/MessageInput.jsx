@@ -22,7 +22,8 @@ const MessageInput = () => {
         value={message}
         onChange={(e)=>setMessage(e.target.value)}
         />
-        <button type='submit' className='absolute inset-y-0 end-0 flex items-center pe-3'>
+        <button type='submit' className='absolute inset-y-0 end-0 flex items-center justify-center bg-blue-500 text-white px-3 py-2 rounded-md hover:bg-blue-600 transition'
+        >
           {loading? <div className='loading loading-spinner'></div>:<BsSend />}
 				
 		</button>
