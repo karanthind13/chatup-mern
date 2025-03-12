@@ -34,11 +34,11 @@ const SignUp = () => {
         <form onSubmit={handleSubmit}>
           <div>
             <label className='label p-2'>
-              <span className='text-base text-white label-text'>Full Name</span>
+              <span className='text-base label-text'>Full Name</span>
             </label>
             <input
                 type='text'
-                placeholder='Enter Username'
+                placeholder='Karanpal Singh'
                 className='w-full input input-bordered  h-10'
                 value={inputs.fullName}
                 onChange={(e)=>setInputs({...inputs, fullName:e.target.value})}
@@ -47,11 +47,11 @@ const SignUp = () => {
 
           <div>
             <label className='label p-2 '>
-              <span className='text-base text-white label-text'>Username</span>
+              <span className='text-base label-text'>Username</span>
             </label>
             <input
               type='text'
-              placeholder='user'
+              placeholder='johndoe'
               className='w-full input input-bordered h-10'
               value={inputs.username}
                 onChange={(e)=>setInputs({...inputs, username:e.target.value})}
@@ -60,7 +60,7 @@ const SignUp = () => {
 
           <div>
             <label className='label'>
-              <span className='text-base text-white label-text'>Password</span>
+              <span className='text-base label-text'>Password</span>
             </label>
             <input
               type='password'
@@ -73,7 +73,7 @@ const SignUp = () => {
 
           <div>
 						<label className='label'>
-							<span className='text-base text-white label-text'>Confirm Password</span>
+							<span className='text-base label-text'>Confirm Password</span>
 						</label>
 						<input
 							type='password'
@@ -86,7 +86,7 @@ const SignUp = () => {
 
           <GenderCheckbox onCheckboxChange ={handleCheckboxChange} selectedGender={inputs.gender}/>
 
-          <Link to={"/login"} className='text-sm text-white hover:underline hover:text-blue-600  inline-block'href='#'>
+          <Link to={"/login"} className='text-sm hover:underline hover:text-blue-600  inline-block'href='#'>
 						Already have an account?
 					</Link>
 
